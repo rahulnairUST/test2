@@ -1,0 +1,15 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+<Dialog id="idRadioDialog1" title="Option 1 selected">
+<content>
+<!-- <VBox class="sapUiSmallMargin" id="idSalesVBox"> -->
+
+<!-- </VBox> -->
+</content>
+<beginButton>
+    <Button id="idOKButton1" type="Emphasized" press="onOKPressed1" text="OK"/>
+</beginButton>
+<endButton>
+    <Button id="idCancel1" press="onCancelPressed1" text="Cancel"/>
+</endButton>
+</Dialog>
+</core:FragmentDefinition>

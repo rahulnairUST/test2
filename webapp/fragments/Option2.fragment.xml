@@ -1,0 +1,82 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+<Dialog id="idRadioDialog2" title="{i18n>dialogTitle}">
+<content>
+<FlexBox alignItems="Start" justifyContent="End">
+	<Button id="idUpdateSAR" type="Emphasized" press="onUpdateSAR" text="Update"/>
+	<Button id="idCancelSAR" icon="sap-icon://sys-cancel" press="onCancelSAR"/>
+</FlexBox>
+<VBox class="sapUiSmallMargin" id="idVBox">    
+    <HBox>
+    <Label id="idContractNoLabel" text="Contract No: "/>
+    <Text id="idContractNo" text="400020480" />
+    </HBox>
+    <Table id="idSARTable" mode="MultiSelect">
+    <headerToolbar>
+			<OverflowToolbar>
+            <content>
+            <ToolbarSpacer/>
+            <SearchField id="idTableSearch" width="auto" search="onSARSearch" placeholder="SAR/Equip/SerialNo/Material/Material Desc"/>
+            </content>
+			</OverflowToolbar>
+		</headerToolbar>
+    <columns>
+			<Column
+				width="auto">
+				<Text text="List of Equipment" />
+			</Column>
+			<Column
+				width="auto">
+				<Text text="Current SAR" />
+			</Column>
+			<Column
+				width="auto">
+				<Text text="Current SAR Desc" />
+			</Column>
+            <Column
+				width="auto">
+				<Text text="Material No" />
+			</Column>
+            <Column
+				width="auto">
+				<Text text="Material Desc" />
+			</Column>
+            <Column
+				width="auto">
+				<Text text="Serial No" />
+			</Column>
+            <Column
+				width="auto">
+				<Text text="New SAR" />
+			</Column>
+            <Column
+				width="auto">
+				<Text text="New SAR Desc" />
+			</Column>
+            <Column
+				width="auto">
+				<Text text="Status/Message" />
+			</Column>
+		</columns>
+    </Table>
+    <ToolbarSpacer/>
+    <HBox>
+    <Label text="New SAR: "/>
+    <ComboBox>
+				<core:Item key="{key}" text="{text}" />
+			</ComboBox>
+    <ToolbarSpacer width="50px"/>
+    <Label text="New SAR Desc: "/>
+    <Input />
+	<ToolbarSpacer width="50px"/>
+	<Button text="Create New SAR"/>        
+    </HBox>
+</VBox>
+</content>
+<beginButton>
+    <Button id="idSubmitSAR" type="Emphasized" press="onSubmitSAR" text="Submit"/>
+</beginButton>
+<endButton>
+    <Button id="idResetSAR" press="onResetSAR" text="Reset"/>
+</endButton>
+</Dialog>
+</core:FragmentDefinition>
